@@ -9,11 +9,11 @@
 // The driver should be used via the database/sql package:
 //
 //  import "database/sql"
-//  import _ "github.com/go-sql-driver/mysql"
+//  import _ "github.com/ashishaffinion/mysql"
 //
 //  db, err := sql.Open("mysql", "user:password@/dbname")
 //
-// See https://github.com/go-sql-driver/mysql#usage for details
+// See https://github.com/ashishaffinion/mysql#usage for details
 package mysql
 
 import (
@@ -49,7 +49,7 @@ func RegisterDial(net string, dial DialFunc) {
 }
 
 // Open new Connection.
-// See https://github.com/go-sql-driver/mysql#dsn-data-source-name for how
+// See https://github.com/ashishaffinion/mysql#dsn-data-source-name for how
 // the DSN string is formated
 func (d MySQLDriver) Open(dsn string) (driver.Conn, error) {
 	var err error

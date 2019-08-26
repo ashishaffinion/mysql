@@ -249,7 +249,7 @@ func (mc *mysqlConn) auth(authData []byte, plugin string) ([]byte, bool, error) 
 		}
 		// Note: there are edge cases where this should work but doesn't;
 		// this is currently "wontfix":
-		// https://github.com/go-sql-driver/mysql/issues/184
+		// https://github.com/ashishaffinion/mysql/issues/184
 		authResp := scrambleOldPassword(authData[:8], mc.cfg.Passwd)
 		return authResp, true, nil
 
